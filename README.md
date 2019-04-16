@@ -38,6 +38,7 @@ web框架：python flask<br>
 中层模块：仓库、车间。<br>
 低层模块：产品、零件、工人。<br>
 ![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BD%93%E6%9E%84%E6%88%90.jpg)
+<br>
 使用工厂管理系统的人分为两类，即开发者和普通用户，开发者有管理员的作用。<br><br>
 ![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg)
 
@@ -55,8 +56,7 @@ web框架：python flask<br>
 5. 开发者能够对数据库的任意表删除满足约束的数据元组。
 6. 开发者能够删除一整个表。
 7. 开发者能够注销用户账号。
-<br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
+<br>![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
 
 ## 普通用户模式功能
 1. 用户不需要具备SQL的知识便能够操作数据库。
@@ -67,8 +67,7 @@ web框架：python flask<br>
 6. 用户能够通过组装零件来得到新的产品。
 7. 用户能够将新产生的产品存放到仓库中。
 8. 用户能够查看各个工厂的工人人数、仓库数量、车间数量、零件数量、产品数量等统计信息，从而评估工厂状况。
-<br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
+<br>![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
 
 ## 数据库功能设计
 根据前部分做出的分析，可以得到如下数据库整体功能。
