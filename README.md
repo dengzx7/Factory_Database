@@ -42,13 +42,17 @@ web框架：python flask<br>
 </div>
 <br>
 使用工厂管理系统的人分为两类，即开发者和普通用户，开发者有管理员的作用。<br><br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg" width="400">
+</div>
 
 ## 功能介绍
 对于开发者，开发者对数据库操作前需要注册个人信息，登陆时需要对照个人信息。开发者能够直接使用SQL语言来操作数据库，能够查询数据库的任意一个表的所有数据或指定属性的数据。开发者能够对数据库的任意表添加满足约束的数据元组。开发者能够对数据库的任意表删除满足约束的数据元组，能够删除一整个表，能够注销用户账号。<br>
 <br>
 对于普通用户，用户对数据库操作前需要注册个人信息，登陆时需要对照个人信息。用户不需要具备SQL的知识便能够操作数据库。用户能够查询数据库的任意一个表的所有数据或指定属性的数据。用户能够指令车间来生产新的零件。用户能够将新产生的零件存放到仓库中。用户能够通过组装零件来得到新的产品。用户能够将新产生的产品存放到仓库中。用户能够查看各个工厂的工人人数、仓库数量、车间数量、零件数量、产品数量等统计信息，从而评估工厂状况。<br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A6%82%E8%A7%88.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A6%82%E8%A7%88.jpg" width="400">
+</div>
 
 ## 开发者模式功能
 1. 开发者能够使用SQL语句来操作数据库。
@@ -58,7 +62,10 @@ web框架：python flask<br>
 5. 开发者能够对数据库的任意表删除满足约束的数据元组。
 6. 开发者能够删除一整个表。
 7. 开发者能够注销用户账号。
-<br>![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
+<br>
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="400">
+</div>
 
 ## 普通用户模式功能
 1. 用户不需要具备SQL的知识便能够操作数据库。
@@ -69,30 +76,43 @@ web框架：python flask<br>
 6. 用户能够通过组装零件来得到新的产品。
 7. 用户能够将新产生的产品存放到仓库中。
 8. 用户能够查看各个工厂的工人人数、仓库数量、车间数量、零件数量、产品数量等统计信息，从而评估工厂状况。
-<br>![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
+<br>
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="400">
+</div>
 
 ## 数据库功能设计
 根据前部分做出的分析，可以得到如下数据库整体功能。
 <br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1.jpg" width="400">
+</div>
 
 ## 数据库E-R模型设计
 由于各个实体属性较多，所以在ER图中没有显示出属性。在ER图中需要注意的是，工厂与仓库是一对多的关系，工厂与车间是一对多的关系，车间与工人是一对多的关系，除这些外都是多对多的关系。对于联系“制作”和联系“装配”，需要对它们添加属性“日期”来记录装配和制造的日期。
 <br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9FER%E5%9B%BE.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9FER%E5%9B%BE.jpg" width="400">
+</div>
 
 ## web应用实现
 数据库前端实现思路如下。
 <br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/web%E5%BA%94%E7%94%A8%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/web%E5%BA%94%E7%94%A8%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.jpg" width="400">
+</div>
 
 ## 开发者模式实现
 开发者模式设计概览。
 <br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="400">
+</div>
 
 ## 用户模式实现
 用户模式设计概览。
 <br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%A7%88.jpg)
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%A7%88.jpg" width="400">
+</div>
 
