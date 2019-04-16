@@ -1,5 +1,6 @@
 # Factory_Database
-SYSU Database Course Project
+SYSU Database Course Project<br>
+项目效果请参见Factory_Database/项目展示
 
 ## 项目环境
 编程语言：python3.6<br>
