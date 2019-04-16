@@ -1,8 +1,0 @@
-
-项目环境
-编程语言：python3.6
-web框架：python的flask
-
-运行项目方式：
-在当前目录下执行命令 > python run.py
-
