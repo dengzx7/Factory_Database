@@ -37,9 +37,11 @@ web框架：python flask<br>
 高层模块：工厂、客户商。<br>
 中层模块：仓库、车间。<br>
 低层模块：产品、零件、工人。<br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BD%93%E6%9E%84%E6%88%90.jpg)<br>
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BD%93%E6%9E%84%E6%88%90.jpg" width="400">
 使用工厂管理系统的人分为两类，即开发者和普通用户，开发者有管理员的作用。<br><br>
-![](https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg)<br>
+<div align=center>
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg" width="400">
 
 ## 功能介绍
 对于开发者，开发者对数据库操作前需要注册个人信息，登陆时需要对照个人信息。开发者能够直接使用SQL语言来操作数据库，能够查询数据库的任意一个表的所有数据或指定属性的数据。开发者能够对数据库的任意表添加满足约束的数据元组。开发者能够对数据库的任意表删除满足约束的数据元组，能够删除一整个表，能够注销用户账号。<br>
