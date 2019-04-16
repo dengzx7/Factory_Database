@@ -9,7 +9,10 @@ web框架：python flask<br>
 操作系统：Windows 10
 
 ## 运行方式
-在当前目录下执行命令 > python run.py<br>
+在当前目录下执行命令
+```
+> python run.py
+```
 注：运行前需要修改Factory_Database/app/sql.py下的IP地址和SQL Server相关信息
 
 ## 摘要
