@@ -9,7 +9,7 @@ web框架：python flask<br>
 操作系统：Windows 10
 
 ## 运行方式
-在当前目录下执行命令
+Clone后在当前目录下执行命令
 ```
 > python run.py
 ```
