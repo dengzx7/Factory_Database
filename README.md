@@ -38,12 +38,12 @@ web框架：python flask<br>
 中层模块：仓库、车间。<br>
 低层模块：产品、零件、工人。<br>
 <div align=center>
-<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BD%93%E6%9E%84%E6%88%90.jpg" width="300">
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BD%93%E6%9E%84%E6%88%90.jpg" width="350">
 </div>
 <br>
 使用工厂管理系统的人分为两类，即开发者和普通用户，开发者有管理员的作用。<br><br>
 <div align=center>
-<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg" width="300">
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E4%BD%BF%E7%94%A8%E4%BA%BA%E5%91%98%E6%9E%84%E6%88%90.jpg" width="350">
 </div>
 
 ## 功能介绍
