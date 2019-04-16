@@ -64,7 +64,7 @@ web框架：python flask<br>
 7. 开发者能够注销用户账号。
 <br>
 <div align=center>
-<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="700">
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="500">
 </div>
 
 ## 普通用户模式功能
@@ -78,7 +78,7 @@ web框架：python flask<br>
 8. 用户能够查看各个工厂的工人人数、仓库数量、车间数量、零件数量、产品数量等统计信息，从而评估工厂状况。
 <br>
 <div align=center>
-<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="700">
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F%E6%B5%81%E7%A8%8B.jpg" width="500">
 </div>
 
 ## 数据库功能设计
@@ -92,7 +92,7 @@ web框架：python flask<br>
 由于各个实体属性较多，所以在ER图中没有显示出属性。在ER图中需要注意的是，工厂与仓库是一对多的关系，工厂与车间是一对多的关系，车间与工人是一对多的关系，除这些外都是多对多的关系。对于联系“制作”和联系“装配”，需要对它们添加属性“日期”来记录装配和制造的日期。
 <br>
 <div align=center>
-<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9FER%E5%9B%BE.jpg" width="800">
+<img src="https://github.com/dengzx7/Factory_Database/blob/master/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9FER%E5%9B%BE.jpg" width="700">
 </div>
 
 ## web应用实现
