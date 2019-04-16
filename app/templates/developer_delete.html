@@ -1,0 +1,64 @@
+<!-- Delete option panel -->
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>deletion: {{table}}</h1>
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+An <b>SQL DELETE</b> statement removes one or more records from a table.
+<br><br>
+<b>SQL: DELETE FROM table WHERE statement</b>
+<br><br>
+Check attribute list here
+<select>
+	{% for i in range(attributeLen) %}
+		<option value=i>{{attributeList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+
+<!-- show table information -->
+<style type="text/css">
+	th, td
+	{
+		text-align: center;
+	}
+</style>
+
+<table border='1'>
+<tr>
+    {% for attributeName in attributeList %}
+    	<th>{{attributeName}}</th>
+    {% endfor %}
+</tr>
+{% for i in range(row) %}
+	<tr>
+		{% for j in range(col) %}
+			{% if (i % 2) == 0 %}
+				<td bgcolor='#E9E9FF'>{{results[i][j]}}</td>
+			{% else %}
+				<td>{{results[i][j]}}</td>
+			{% endif %}
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+<br><br>
+
+<form action='/developer/delete/result' method=post>
+	<b>Please input standard SQL statement to delete(the followings are attributes): </b><br><br>
+	<!-- here need to input all attribute value -->
+	{% for i in range(attributeLen) %}
+		&emsp; {{attributeList[i]}}
+	{% endfor %}
+	<br><br>
+	<b>SQL: DELETE FROM table WHERE </b> <input type=text name=deleteSQL>
+	<input type=submit value=query>
+</form>
+
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<br><br><br>
+
+{% endblock %}

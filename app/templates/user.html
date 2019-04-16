@@ -1,0 +1,135 @@
+<!-- user panel -->
+<!-- database's operation -->
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>Welcome, {{user}} (user)</h1>
+
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<h2>The tables and attributes in factory database</h2>
+{% for i in range(tableLen) %}
+	<h4 style='display: inline;'>{{tableList[i]}}</h4>
+	{% for attibute in attributeList[i] %}
+		&emsp; ({{attibute}})
+	{% endfor %}
+	<br>
+{% endfor %}
+
+<!-- Function 1 -->
+<!-- View tables -->
+<hr align='left' width='800' size='5' color='#0000AA'>
+<br>
+<h2>
+	1. View database tables
+</h2>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+Check table list here
+<select>
+	{% for i in range(tableLen) %}
+		<option value=i>{{tableList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/user/view' method=post>
+	<b>Please input a table which you want to view: </b>
+	<input type=text name=table>
+	<input type=submit value=submit>
+</form>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+
+<!-- Function 2 -->
+<!-- Workshops produce parts and store them in warehouses -->
+<h2>
+	2. Order workshop to produce parts and store them in warehouse
+</h2>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+<!-- PART -->
+<!-- part_id, weight, price, warehouse_id, workshop_id -->
+<!-- MAKE -->
+<!-- worker_id, part_id, date -->
+Check workshop here
+<select>
+	{% for i in range(wsListLen) %}
+		<option value=i>{{wsList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+Check warehouse here
+<select>
+	{% for i in range(whListLen) %}
+		<option value=i>{{whList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<b>Please input the following necessary values</b>
+<br><br>
+<form action='/user/parts' method=post>
+	<b>part_id</b> <input type=text name=part_id><br><br>
+	<b>weight</b> <input type=text name=weight><br><br>
+	<b>price</b> <input type=text name=price><br><br>
+	<b>workshop_id</b> <input type=text name=workshop_id><br><br>
+	<b>warehouse_id</b> <input type=text name=warehouse_id><br><br>
+	<input type=submit value=order style='height:40px; width:260px; display:inline-block; text-align:center;'>
+</form>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+
+<!-- Function 3 -->
+<!-- Assemble parts to generate products and store them in warehouse -->
+<h2>
+    3. Assemble parts to generate products and store them in warehouse
+</h2>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+<!-- PORDUCT -->
+<!-- product_id, class, price, warehouse_id -->
+<!-- ASSEMBLE -->
+<!-- product_id, part_id, date -->
+Check part here
+<select>
+	{% for i in range(partListLen) %}
+		<option value=i>{{partList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+Check warehouse here
+<select>
+	{% for i in range(whListLen) %}
+		<option value=i>{{whList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<b>Please input the following necessary values</b>
+<br><br>
+<form action='/user/products' method=post>
+    <b>product_id</b> <input type=text name=product_id><br><br>
+    <b>class</b> <input type=text name=class><br><br>
+    <b>price</b> <input type=text name=price><br><br>
+    <b>part_id</b> <input type=text name=part_id><br><br>
+    <b>warehouse_id</b> <input type=text name=warehouse_id><br><br>
+    <input type=submit value=order style='height:40px; width:260px; display:inline-block; text-align:center;'>
+</form>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+
+<!-- Function 4 -->
+<!-- Check the number of workers, warehouses, workshops, parts and products in each factory -->
+<h2>
+	4. Check the number of workers, warehouses, workshops, <br>
+	parts and products in each factory
+</h2>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+<form action='/user/state' method=post>
+    <input type=submit value=check style='height:40px; width:260px; display:inline-block; text-align:center;'>
+</form>
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br>
+
+<br><br><br><br><br>
+
+{% endblock %}

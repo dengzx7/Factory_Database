@@ -1,0 +1,103 @@
+<!-- developer panel -->
+<!-- database's operation -->
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>Welcome, {{user}} (developer)</h1>
+
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<h2>The tables and attributes in factory database</h2>
+{% for i in range(tableLen) %}
+	<h4 style='display: inline;'>{{tableList[i]}}</h4>
+	{% for attibute in attributeList[i] %}
+		&emsp; ({{attibute}})
+	{% endfor %}
+	<br>
+{% endfor %}
+
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<br>
+<h2>Following the instruction to operate factory database</h2>
+
+<!-- select -->
+<hr align='left' width='800' size='2' color='#00AA00'>
+An <b>SQL SELECT</b> statement returns a result set of records from one or more tables.
+<br><br>
+<b>SQL: SELECT attribute FROM table</b>
+<br><br>
+Check table list here
+<select>
+	{% for i in range(tableLen) %}
+		<option value=i>{{tableList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/developer/select' method=post>
+	<b>Please input a table to select: </b>
+	<input type=text name=table>
+	<input type=submit value=submit>
+</form>
+
+<!-- insert -->
+<hr align='left' width='800' size='2' color='#00AA00'>
+An <b>SQL INSERT</b> statement adds one or more records to any single table in a relational database.
+<br><br>
+<b>SQL: INSERT INTO table VALUES value tuple</b>
+<br><br>
+Check table list here
+<select>
+	{% for i in range(tableLen) %}
+		<option value=i>{{tableList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/developer/insert' method=post>
+	<b>Please input a table to insert: </b>
+	<input type=text name=table>
+	<input type=submit value=submit>
+</form>
+
+<!-- delete -->
+<hr align='left' width='800' size='2' color='#00AA00'>
+An <b>SQL DELETE</b> statement removes one or more records from a table. 
+<br><br>
+<b>SQL: DELETE FROM table WHERE statement</b>
+<br><br>
+Check table list here
+<select>
+	{% for i in range(tableLen) %}
+		<option value=i>{{tableList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/developer/delete' method=post>
+	<b>Please input a table to delete: </b>
+	<input type=text name=table>
+	<input type=submit value=submit>
+</form>
+
+<!-- drop -->
+<hr align='left' width='800' size='2' color='#00AA00'>
+An <b>SQL DROP</b> statement destroys an existing database, table, index, or view.
+<br><br>
+<b>SQL: DROP TABLE table</b>
+<br><br>
+Check table list here
+<select>
+	{% for i in range(tableLen) %}
+		<option value=i>{{tableList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/developer/drop' method=post>
+	<b>Please input a table to drop: </b>
+	<input type=text name=table>
+	<input type=submit value=submit>
+</form>
+
+<hr align='left' width='800' size='2' color='#00AA00'>
+<br><br><br><br><br>
+
+{% endblock %}

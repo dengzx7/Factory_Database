@@ -1,0 +1,34 @@
+<!-- role panel -->
+<!-- choose mode: developer or user -->
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="width:1520px; text-align:center;">
+
+<h1>Welcome to the Factory management system!</h1>
+<hr align='left' width='1520' size='5' color='#0000AA'>
+<br>
+
+<b>Under the <font color="#FF0000">user</font> mode, users can operate the database without the knowledge of SQL language.</b>
+<br><br>
+<b>In the <font color="#FF0000">developer</font> mode, developers can directly use the SQL language to operate the database.</b>
+<br><br>
+<hr align='left' width='1520' size='5' color='#0000AA'>
+
+
+<h1>User or Developer?</h1>
+<form action='/user' method=post enctype=multipart/form-data>
+	<input type=submit value=User style='height:40px; width:240px; display:inline-block; text-align:center;'>
+</form>
+<br>
+
+<form action='/developer' method=post enctype=multipart/form-data>
+	<input type=submit value=Developer style='height:40px; width:240px; display:inline-block; text-align:center;'>
+</form>
+<br>
+
+<hr align='left' width='1520' size='5' color='#0000AA'>
+
+</div>
+{% endblock %}

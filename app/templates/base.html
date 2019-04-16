@@ -1,0 +1,18 @@
+<!-- base template -->
+
+<html>
+	<head>
+		<title>Factory management system</title>
+	</head>
+	<body style='background-attachment:fixed' background='https://stmed.net/sites/default/files/white-wallpapers-25354-6092577.jpg'>
+		<div>
+			Jump to panel: &emsp; 
+			<a href='#' onClick='javascript :history.back(1);'>Back</a> &emsp;
+			<a href='javascript:location.reload();'>Refresh</a> &emsp; 
+			<a href='/'>Home</a> &emsp;
+			<a href='/login'>Login</a>
+		</div>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>

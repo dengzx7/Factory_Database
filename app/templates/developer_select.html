@@ -1,0 +1,29 @@
+<!-- Select option panel -->
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>selection: {{table}}</h1>
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+An <b>SQL SELECT</b> statement returns a result set of records from one or more tables.
+<br><br>
+<b>SQL: SELECT attribute FROM table</b>
+<br><br>
+Check attribute list here
+<select>
+	{% for i in range(attributeLen) %}
+		<option value=i>{{attributeList[i]}}</option>
+	{% endfor %}
+</select>
+<br><br>
+<form action='/developer/select/result' method=post>
+	<b>Please input an attribute to select: </b>
+	<input type=text name=attribute>
+	<input type=submit value=query>
+</form>
+
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<br><br><br>
+
+{% endblock %}

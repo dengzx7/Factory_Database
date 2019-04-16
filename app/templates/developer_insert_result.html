@@ -1,0 +1,37 @@
+<!-- Insert result panel -->
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>Table: {{table}}, INSERT {{SF}}</h1>
+<h3>After insertion</h3>
+<hr align='left' width='800' size='5' color='#0000AA'>
+
+<style type="text/css">
+	th, td
+	{
+		text-align: center;
+	}
+</style>
+
+<table border='1'>
+<tr>
+    {% for attributeName in attributeList %}
+    	<th>{{attributeName}}</th>
+    {% endfor %}
+</tr>
+{% for i in range(row) %}
+	<tr>
+		{% for j in range(col) %}
+			{% if (i % 2) == 0 %}
+				<td bgcolor='#E9E9FF'>{{results[i][j]}}</td>
+			{% else %}
+				<td>{{results[i][j]}}</td>
+			{% endif %}
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+<br><br><br>
+
+{% endblock %}
