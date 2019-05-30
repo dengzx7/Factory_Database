@@ -3,10 +3,10 @@ SYSU Database Course Project<br>
 项目效果请参见Factory_Database/项目展示
 
 ## 项目环境
-编程语言：python3.6<br>
-web框架：python flask<br>
-数据库：SQL Server<br>
-操作系统：Windows 10
+* 编程语言：python3.6<br>
+* web框架：python flask<br>
+* 数据库：SQL Server<br>
+* 操作系统：Windows 10
 
 ## 运行方式
 Clone后在当前目录下执行命令
